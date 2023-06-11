@@ -1,5 +1,6 @@
 import HeaderSection from "./Sections/HeaderSection";
 import ProductSection from "./Sections/ProductSection";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -11,6 +12,9 @@ function App() {
       <main>
         <ProductSection />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
