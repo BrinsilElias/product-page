@@ -1,4 +1,5 @@
 import HeaderSection from "./Sections/HeaderSection";
+import ProductSection from "./Sections/ProductSection";
 
 function App() {
 
@@ -7,6 +8,9 @@ function App() {
       <header>
         <HeaderSection />
       </header>
+      <main>
+        <ProductSection />
+      </main>
     </>
   );
 }
