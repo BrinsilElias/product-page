@@ -13,9 +13,9 @@ import {
 
 const Product = () => {
   return (
-    <div>
+    <div className="max-w-[400px] mx-auto flex flex-col items-center md:flex-row md:items-start md:max-w-[770px] md:mx-auto">
       {/* Product Image */}
-      <div className="px-16 w-[390px] h-[380px]">
+      <div className="px-16 w-[390px] h-[380px] md:w-[580px] md:mt-8">
         <img
           src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
           alt="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
@@ -34,7 +34,7 @@ const Product = () => {
         </div>
         {/* Product Descriptions */}
         <div className="py-5 border-b border-solid border-slate-300">
-          <h1 className="text-[21px] font-medium text-neutral-800">
+          <h1 className="text-[21px] font-medium text-neutral-800 md:text-[28px]">
             Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
           </h1>
           <h2 className="mt-2 text-md text-slate-400">Fjallaraven</h2>

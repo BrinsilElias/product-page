@@ -3,7 +3,7 @@ import { ArrowIcon } from "./Icons";
 
 const Breadcrumbs = () => {
   return (
-    <div className="px-4 mb-8 flex items-center gap-2">
+    <div className="px-4 mb-8 flex items-center gap-2 max-w-[400px] mx-auto md:max-w-none">
       <p className="text-sm text-slate-400">Category</p>
       <ArrowIcon />
       <p className="text-sm text-slate-400">Men's Clothing</p>
