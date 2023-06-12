@@ -13,7 +13,7 @@ import {
 
 const Product = () => {
   return (
-    <div className="max-w-[400px] mx-auto flex flex-col items-center md:flex-row md:items-start md:max-w-[835px] md:mx-auto lg:max-w-[1200px] lg:mx-auto">
+    <div className="max-w-[400px] mx-auto flex flex-col items-center md:flex-row md:items-start md:max-w-[835px] md:mx-auto lg:max-w-[1100px] lg:mx-auto">
       {/* Product Image */}
       <div className="px-16 w-[390px] h-[380px] md:w-[580px] md:mt-8">
         <img
