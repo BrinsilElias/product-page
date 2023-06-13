@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Counter from "./Counter";
 import * as RadioGroup from "@radix-ui/react-radio-group";
 import {
@@ -11,13 +12,13 @@ import {
   TruckIcon,
 } from "./Icons";
 
-const Product = () => {
+function Product(product) {
   return (
     <div className="max-w-[400px] mx-auto flex flex-col items-center md:flex-row md:items-start md:max-w-[835px] md:mx-auto lg:max-w-[1100px] lg:mx-auto">
       {/* Product Image */}
       <div className="px-16 w-[390px] h-[380px] md:w-[580px] md:mt-8">
         <img
-          src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+          src={product.product_data.image}
           alt="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
         />
       </div>
@@ -36,12 +37,13 @@ const Product = () => {
           {/* Product Descriptions */}
           <div className="py-5 lg:pt-0">
             <h1 className="text-[21px] font-medium text-neutral-800 md:text-[28px] lg:max-w-[500px]">
-              Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
+              {product.product_data.title}
             </h1>
-            <h2 className="mt-2 text-md text-slate-400">Fjallaraven</h2>
+            <h2 className="mt-2 text-md text-slate-400">
+              {product.product_data.category}
+            </h2>
             <p className="mt-3 text-sm text-neutral-800 md:text-md">
-              Your perfect pack for everyday use and walks in the forest. Stash
-              your laptop (up to 15 inches) in the padded sleeve, your everyday
+              {product.product_data.description}
             </p>
           </div>
         </div>
@@ -50,7 +52,7 @@ const Product = () => {
           <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start">
             <div>
               <p className="text-[28px] font-bold text-primary lg:text-[34px]">
-                $109.56
+                ${product.product_data.price}
               </p>
               <p className="text-md text-neutral-500 line-through">$71.56</p>
             </div>
@@ -58,11 +60,11 @@ const Product = () => {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-2 px-2 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm font-medium">
                   <RatingStarIcon />
-                  3.9
+                  {product.product_data.rating.rate}
                 </div>
                 <div className="flex items-center gap-2 px-2 py-1 bg-blue-200 text-blue-800 rounded-full text-sm font-medium">
                   <ReviewIcon />
-                  120 Reviews
+                  {product.product_data.rating.count} Reviews
                 </div>
               </div>
             </div>
@@ -164,6 +166,6 @@ const Product = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Product;
